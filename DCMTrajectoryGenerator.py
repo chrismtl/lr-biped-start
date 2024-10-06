@@ -3,7 +3,7 @@ import math
 from matplotlib import pyplot as plt
 from matplotlib.patches import Rectangle
 
-#Change
+
 
 class DCMTrajectoryGenerator:
     def __init__(self,CoMHeight):
