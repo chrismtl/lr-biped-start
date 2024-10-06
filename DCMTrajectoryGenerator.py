@@ -3,8 +3,6 @@ import math
 from matplotlib import pyplot as plt
 from matplotlib.patches import Rectangle
 
-
-
 class DCMTrajectoryGenerator:
     def __init__(self,CoMHeight):
         self.CoMHeight = CoMHeight # We assume that CoM and pelvis are the same point
@@ -28,7 +26,7 @@ class DCMTrajectoryGenerator:
     def getCoM(self):
         #This function generates the CoM trajectory by integration of CoM velocity(that has been found by the DCM values)
         self.CoMDot= self.omega * (self.DCM - self.CoM) #todo: use equation (3) in the project description
-        self.CoM= self.CoM + self.CoMDot * self.timeStep #todo: Simple euler numerical integration
+        self.CoM= self.CoM + self.CoMDotPrev * self.timeStep #todo: Simple euler numerical integration
         self.CoMDotPrev=self.CoMDot
         return self.CoM
 
