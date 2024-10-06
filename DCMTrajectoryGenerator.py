@@ -3,6 +3,8 @@ import math
 from matplotlib import pyplot as plt
 from matplotlib.patches import Rectangle
 
+#Change
+
 class DCMTrajectoryGenerator:
     def __init__(self,CoMHeight):
         self.CoMHeight = CoMHeight # We assume that CoM and pelvis are the same point
